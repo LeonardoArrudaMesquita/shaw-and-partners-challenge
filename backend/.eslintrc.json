@@ -1,7 +1,7 @@
 {
     "extends": "standard-with-typescript",
     "parserOptions": {
-      "project": "./tsconfig.json"      
+      "project": "backend/tsconfig.json"      
     },
     "rules": {
         "@typescript-eslint/strict-boolean-expressions": "off",
@@ -12,5 +12,8 @@
         "@typescript-eslint/no-misused-promises": "off",
         "@typescript-eslint/no-namespace": "off",
         "import/export": "off"
+      },
+      "env": {
+        "node": true
       }
   }
