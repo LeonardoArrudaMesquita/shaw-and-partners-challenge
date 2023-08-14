@@ -4,14 +4,14 @@ import {
   Route,
 } from "react-router-dom";
 
-import App from "../App";
+import CSVDataSeacherPage from '../components/views/CSVDataSeacherPage';
 import React from "react";
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <RouterDOMRoutes>
-        <Route path="/" element={<App />} />        
+        <Route path="/" element={<CSVDataSeacherPage />} />        
       </RouterDOMRoutes>
     </BrowserRouter>
   );
