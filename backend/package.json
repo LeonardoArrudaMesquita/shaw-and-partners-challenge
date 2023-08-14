@@ -1,0 +1,15 @@
+{
+  "name": "shaw-and-partners-challenge",
+  "version": "1.0.0",
+  "description": "This project was designed to test my full-stack knowledge and assess my suitability for the Software Engineer position at Shaw and Partners by creating a CSV data searcher with attention to detail, standards, reusability and scalability.",
+  "main": "index.js",
+  "dependencies": {
+    "git-commit-msg-linter": "^5.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Arruda Mesquita",
+  "license": "ISC"
+}
