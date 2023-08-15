@@ -32,7 +32,7 @@ export default function CSVDataSeacherPage() {
       <h1>CSV Data Searcher</h1>
       <CSVInput onChangeCSV={(e) => handleInputFile(e)} />      
       <div className="csv-data-searcher-input">
-      <label>search: </label><Input onChange={(e) => handleFilter(e.target.value)} value={filter} type="text" />
+      <label>search: </label><Input onChange={(e) => handleFilter(e.target.value)} value={filter} type="text" data-testid="filter-input" />
       </div> 
       <CardList cards={cards} />
     </div>
