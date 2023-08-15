@@ -1,7 +1,6 @@
 <h1 align="center">Shaw and Partners Challenge 💚</h1>
-<h2 align="center">CSV Data Searcher</h1> 
 
-![](src/assets/jobsityCalendar.png)
+![](frontend/src/assets/csv-data-searcher.png)
 
 <div align="center">
 
@@ -73,7 +72,7 @@ Then,
 $ npm run dev
 ```
 
-Finally, open your HTTP Request tool and visit http://localhost:4000/
+Finally, open your HTTP Request tool.
 
 ## ⌨️ Development
 
