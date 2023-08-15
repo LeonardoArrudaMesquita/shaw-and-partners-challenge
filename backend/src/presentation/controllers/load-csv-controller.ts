@@ -6,21 +6,26 @@ import { getCSVData } from '../../data/data-storage'
 export class LoadCSVController implements Controller {
   async handle (request: LoadCSVController.Request): Promise<HttpResponse> {
     const data = getCSVData()
+    const query = request.q
 
-    const filteredCSVData = data.filter((row) => {
-      const values = Object.values(row)
+    if (query) {
+      const filteredCSVData = data.filter((row) => {
+        const values = Object.values(row)
 
-      return values.some(value =>
-        value.toString().toLowerCase().includes(request.q.toLowerCase())
-      )
-    })
+        return values.some(value =>
+          value.toString().toLowerCase().includes(query.toLowerCase())
+        )
+      })
 
-    return ok(filteredCSVData)
+      return ok(filteredCSVData)
+    }
+
+    return ok(data)
   }
 }
 
 export namespace LoadCSVController {
   export type Request = {
-    q: string
+    q?: string
   }
 }
