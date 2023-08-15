@@ -3,6 +3,7 @@ import { badRequestError, internalServerError, ok } from '../helpers/http-helper
 import { type Controller } from '../protocols/controller'
 import { Readable } from 'stream'
 import { type HttpResponse } from '../protocols/http'
+import { setCSVData } from '../../data/data-storage'
 
 type CSVRow = Record<string, string>
 
@@ -23,6 +24,7 @@ export class UploadCSVController implements Controller {
 
       stream.pipe(csvStream)
 
+      setCSVData(data)
       return ok(data)
     } catch (error) {
       return internalServerError()
