@@ -1,0 +1,21 @@
+h1 {
+  color: #00975c;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.csv-data-searcher {
+
+    &-container {
+        display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+        padding-right: 1.6rem;
+    }
+  
+    &-input {
+        margin-top: 3rem;
+    }
+}

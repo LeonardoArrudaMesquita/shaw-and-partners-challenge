@@ -15,7 +15,7 @@ export class UploadCSVController implements Controller {
       if (!request.file) {
         return badRequestError()
       }
-
+      setCSVData([])
       const fileBuffer = request.file.buffer
       const stream = Readable.from(fileBuffer)
 

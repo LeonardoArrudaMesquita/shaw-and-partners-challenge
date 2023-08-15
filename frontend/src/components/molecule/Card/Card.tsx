@@ -6,7 +6,7 @@ export default function Card({ data }: CardProps) {
   const shapedData = Object.entries(data);
 
   return (
-    <div>
+    <div className="card">
       {shapedData.map(([key, value]) => (
         <p>
           <strong>{key}: </strong>

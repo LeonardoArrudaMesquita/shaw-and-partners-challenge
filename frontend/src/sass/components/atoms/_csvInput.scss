@@ -1,0 +1,17 @@
+input[type="file"] {
+    display: none;
+}
+
+.csv-input-file {
+    padding: 1rem 1rem;
+    width: 20rem;
+    background-color: #00693F;
+    color: #FFF;
+    font-weight: bold;    
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    text-align: center;
+}
