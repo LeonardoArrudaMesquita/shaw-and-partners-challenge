@@ -1,11 +1,12 @@
 import { type Router } from 'express'
+import { adaptRoute } from '../adapters/express-route-adapter'
+import { makeLoadCSVController } from '../factories/controllers/load-csv-controller-factory'
+import { makeUploadCSVController } from '../factories/controllers/upload-csv-controller-factory'
+import multer from 'multer'
 
 export default (router: Router): void => {
-  router.get('/users', (req, res) => {
-    res.json({ ok: 'ok' })
-  })
-
-  router.post('/files', (req, res) => {
-    res.json({ ok: 'ok' })
-  })
+  const storage = multer.memoryStorage()
+  const upload = multer({ storage })
+  router.get('/users', adaptRoute(makeLoadCSVController()))
+  router.post('/files', upload.single('file'), adaptRoute(makeUploadCSVController()))
 }
