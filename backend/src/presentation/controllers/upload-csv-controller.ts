@@ -7,7 +7,7 @@ import { setCSVData } from '../../data/data-storage'
 
 type CSVRow = Record<string, string>
 
-const data: CSVRow[] = []
+let data: CSVRow[] = []
 
 export class UploadCSVController implements Controller {
   async handle (request: UploadCSVController.Request): Promise<HttpResponse> {
@@ -18,6 +18,7 @@ export class UploadCSVController implements Controller {
       setCSVData([])
       const fileBuffer = request.file.buffer
       const stream = Readable.from(fileBuffer)
+      data = []
 
       const csvStream = csvParser()
       csvStream.on('data', (row: CSVRow) => data.push(row))

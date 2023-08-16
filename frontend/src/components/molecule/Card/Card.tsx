@@ -10,7 +10,7 @@ export default function Card({ data }: CardProps) {
       {shapedData.map(([key, value], index) => (
         <p key={index}>
           <strong>{key}: </strong>
-          <label>{value as string}</label>
+          <label className="card-item-value">{value as string}</label>
         </p>
       ))}
     </div>
